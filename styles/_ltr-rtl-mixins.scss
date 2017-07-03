@@ -1,0 +1,101 @@
+
+@mixin padding-right($value, $dir: $right-dir) {
+  padding-#{$dir}: $value;
+}
+
+@mixin padding-left($value, $dir: $left-dir) {
+  padding-#{$dir}: $value;
+}
+
+@mixin margin-right($value, $dir: $right-dir) {
+  margin-#{$dir}: $value;
+}
+
+@mixin margin-left($value, $dir: $left-dir) {
+  margin-#{$dir}: $value;
+}
+
+@mixin border-right($values, $dir: $right-dir) {
+  border-#{$dir}: $values;
+}
+
+@mixin border-left($values, $dir: $left-dir) {
+  border-#{$dir}: $values;
+}
+
+@mixin border-left-width($value, $dir: $left-dir) {
+  border-#{$dir}-width: $value;
+}
+
+@mixin border-right-width($value, $dir: $right-dir) {
+  border-#{$dir}-width: $value;
+}
+
+@mixin right($value, $dir: $right-dir) {
+  #{$dir}: $value;
+}
+
+@mixin left($value, $dir: $left-dir) {
+  #{$dir}: $value;
+}
+
+@mixin text-align($value, $preserveInRTL: false) {
+  @if ($preserveInRTL){
+    text-align: $value;
+  }
+  @else if ($isRtl) {
+    @if ($value==left) {
+      text-align: right;
+    } @else if ($value==right) {
+      text-align: left;
+    }
+  } @else {
+    text-align: $value;
+  }
+}
+
+@mixin float($value) {
+  float: $value;
+}
+
+@mixin clear($value) {
+  clear: $value;
+}
+
+@mixin float-rtl($value) {
+  @if ($isRtl) {
+    @if ($value==left) {
+      float: right;
+    } @else if ($value==right) {
+      float: left;
+    }
+  }
+  @if($isRtl != true) {
+    float: $value;
+  }
+}
+
+@mixin transform-rtl($value) {
+  @if ($isRtl) {
+    @include transform($value);
+  }
+}
+
+@mixin direction-rtl($value){
+  @if ($isRtl) {
+    direction: $value;
+  }
+}
+
+@mixin border-width($value) {
+  border-width: shorthandPropertyHelper($value);
+}
+
+@mixin border-right-color($value) {
+  border-#{$right-dir}-color: $value
+}
+
+@mixin border-radius-rtl($val, $firstPos, $secondPos: $left-dir) {
+  border-#{$firstPos}-#{$secondPos}-radius: $val;
+}
+

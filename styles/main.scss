@@ -1,0 +1,88 @@
+@import "normalize";
+// @import "ltr-vars";
+@import "rtl-vars";
+@import "ltr-rtl-mixins";
+@import "mixins";
+
+.pitch {
+	@include margin-left(180px);
+	@include margin-right(20px);
+	.pitch-content {
+		@include padding-left(20px);	
+		@include border-left(1px solid #ccc);
+	}
+	.pitch-right {
+		@include margin-left(30px);
+	}
+}
+
+.copywrite {
+	margin-top: 30px;
+	padding-top: 20px;
+  @include text-align(right);
+  @include margin-right(30px);
+  color: #aaa;
+}
+
+footer {
+	box-shadow: 1px -1px 1px #ccc;
+}
+
+.jumbotron {
+	@include padding-left(180px);
+	@include padding-right(30px);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: url('../images/jumbo-bg.png');
+	.jumbotron-content {
+		background: rgba(255, 255, 255, 0.29);
+    padding: 20px 20px 30px 20px;
+    color: white;
+    font-size: 16px;
+    button {
+    	color: #696969;
+    	padding: 10px;
+    	border-radius: 6px;
+    	border-width: 0;
+    	background-color: #36e9fb;
+    	box-shadow: 1px 1px 1px #585858;
+    }
+	}
+}
+
+nav {
+
+	border-bottom: 1px solid #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+
+	.logo {
+		margin-top: 25px;
+		text-align: center;
+		@include float-rtl(left);
+		width: 100px;
+		@include margin-left(20px);
+	}
+
+	ul {
+		@include float-rtl(left);
+		li {
+			border-radius: 4px;
+  		background-color: #dffffe;
+			@include float-rtl(left);
+			padding: 10px 10px;
+			list-style: none;
+			@include margin-left(20px);
+			box-shadow: 1px 1px 1px #888;
+			a {
+				text-decoration: none;
+				color: #048ebb;
+			}
+		}
+	}
+}
+
+.page-title {
+	font-size: 1.5em;
+	@include text-align(left);
+	@include margin-left(180px);
+}

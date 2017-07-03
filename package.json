@@ -1,0 +1,28 @@
+{
+  "name": "rtl-demo",
+  "version": "1.0.0",
+  "description": "RTL to LTR demo.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishnun/rtl-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishnun/rtl-demo/issues"
+  },
+  "homepage": "https://github.com/vishnun/rtl-demo#readme"
+}
